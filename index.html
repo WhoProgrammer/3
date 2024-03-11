@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MediaSync</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
+  </head>
+  <style>
+    *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #fff3ec;
+}
+header{
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid #9f9f9f;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 20px;
+}
+.logo h3{
+  font: normal 36px "open Sans", cursive;
+}
+.logo span{
+  color: #ff6635;
+}
+nav ul{
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li{
+  margin-right: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+}
+
+/* Hero */
+.hero{
+  margin-top: 40px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.hero .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hero .column{
+  flex: 50%;
+  padding: 0 10px;
+}
+.hero h1{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.hero p{
+  margin-bottom: 12px;
+  line-height: 1.3rem;
+}
+.hero img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+.hero .button{
+  display: inline-block;
+  background-color: #ff6635;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.hero .button:hover{
+  background-color: #333333;
+}
+
+
+/* Footer */
+.footer-distributed{
+  background-color: #0f4867;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 25px 50px;
+  margin-top: 80px;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+.footer-distributed .footer-left{
+  width: 40%;
+}
+.footer-distributed h3{
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+.footer-distributed h3 span{
+  color: #ff7a2c;
+}
+.footer-distributed .footer-links{
+  color: #ffffff;
+  margin: 20px 0 18px;
+  padding: 0;
+}
+.footer-distributed .footer-links a{
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-distributed .footer-company-name{
+  color: #ff6635;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-center{
+  width: 35%;
+}
+.footer-distributed .footer-center i{
+  background-color: #ffffff;
+  color: #0f4867;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+.footer-distributed .footer-center p span{
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer-distributed .footer-center p a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-distributed .footer-links a:before{
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #ffffff;
+  display: inline-block;
+  padding-right: 5px;
+}
+.footer-distributed .footer-links .link-1:before{
+  content: none;
+}
+.footer-distributed .footer-right{
+  width: 20%;
+}
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-company-about span{
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #0f4867;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.logo{
+  width: 250px;
+}
+/* Responsive Design */
+@media (max-width: 886px) {
+  header{
+    flex-direction: column;
+  }
+  .logo{
+    margin-bottom: 10px;
+  }
+.footer-distributed .logo{
+  width: 250px;
+  margin: auto;
+}
+  .hero{
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  .hero .row{
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero .column{
+    margin-bottom: 20px;
+  }
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+}
+@media (max-width: 526px) {
+  header,
+  .hero{
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .footer-company-name{
+    text-align: center;
+  }
+  .client-hidden{
+    display: none;
+  }
+}
+  </style>
+  <body>
+    <header>
+      <!-- Header content -->
+      <div class="logo">
+        <h3>Hello<span>World</span></h3>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <!-- Hero section content -->
+        <div class="row">
+          <div class="column">
+            <h1>I'm provide best-design your website</h1>
+          </div>
+          <div class="column">
+            <p>
+              Building a brand doesn't happen overnight. It takes a lot of work
+              to forge strong relationships with people and much of that work is
+              done through marketing.
+            </p>
+            <a href="#" class="button">Learn More</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="1.png" alt="Image 1" />
+          </div>
+          <div class="column">
+            <img src="2.png" alt="Image 2" />
+          </div>
+        </div>
+      </section>
+      <section class="statistics">
+    
+    </main>
+
+    <footer class="footer-distributed">
+      <!-- Footer content -->
+      <div class="footer-left">
+        <div class="logo"><img src="./WHO.png" width="100%" alt=""></div>
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          <p><span>Garden of Eden</span>, Paradise</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          <p>+0.111.222.333</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope"></i>
+          <p>support@company.com</p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the Company</span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque optio id minima totam nam, esse error deleniti dolores recusandae repudiandae, provident porro excepturi quo cum est repellendus harum illo!
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-company-name">
+          HowProgrammer &copy; 2024. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
